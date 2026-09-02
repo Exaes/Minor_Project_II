@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Data
+*.db
+data-layer/raw/*.csv
+!data-layer/raw/.gitkeep
+data-layer/processed/*.csv
+!data-layer/processed/.gitkeep
+
+# Models
+modeling-layer/saved_models/*.joblib
+modeling-layer/saved_models/*.json
+!modeling-layer/saved_models/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log

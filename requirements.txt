@@ -1,0 +1,41 @@
+# ──────────────────────────────────────────────
+# AI-Driven Startup Analysis & Recommendation
+# ──────────────────────────────────────────────
+
+# ── Core ──
+numpy>=1.24,<2.0
+pandas>=2.0,<3.0
+
+# ── Data Layer ──
+sqlalchemy>=2.0,<3.0
+openpyxl>=3.1       # Excel file support
+
+# ── Processing Layer ──
+scikit-learn>=1.3,<2.0
+
+# ── Modeling Layer ──
+lightgbm>=4.0,<5.0
+joblib>=1.3
+
+# ── LLM Layer ──
+huggingface-hub>=0.20
+requests>=2.31
+
+# ── Application Layer ──
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27
+python-multipart>=0.0.6   # File uploads
+fpdf2>=2.7                 # PDF generation
+
+# ── Presentation Layer ──
+streamlit>=1.32
+plotly>=5.18
+
+# ── Testing ──
+pytest>=8.0
+httpx>=0.27            # FastAPI test client
+
+# ── Utilities ──
+python-dotenv>=1.0
+pydantic>=2.0,<3.0
+pydantic-settings>=2.0

@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  # Data generation & Training init container (runs once then exits)
+  init:
+    build: .
+    volumes:
+      - .:/app
+    command: >
+      bash -c "python scripts/generate_synthetic_data.py && python scripts/train_model.py"
+
+  # FastAPI Backend
+  backend:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./startup_analysis.db
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - HF_API_TOKEN=${HF_API_TOKEN:-}
+    command: uvicorn application-layer.main:app --host 0.0.0.0 --port 8000
+    depends_on:
+      init:
+        condition: service_completed_successfully
+
+  # Streamlit Frontend
+  frontend:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8501:8501"
+    environment:
+      - API_HOST=backend
+      - API_PORT=8000
+    command: streamlit run presentation-layer/app.py --server.port 8501 --server.address 0.0.0.0
+    depends_on:
+      - backend
