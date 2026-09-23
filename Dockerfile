@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Create directories that might be needed
-RUN mkdir -p data-layer/raw data-layer/processed modeling-layer/saved_models
+RUN mkdir -p data_layer/raw data_layer/processed modeling_layer/saved_models
 
 # Expose ports
 EXPOSE 8000

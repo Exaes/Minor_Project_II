@@ -1,0 +1,30 @@
+{
+  "accuracy": 0.79,
+  "f1_score": 0.8627450980392157,
+  "precision": 0.8571428571428571,
+  "recall": 0.868421052631579,
+  "roc_auc": 0.8338815789473685,
+  "train_size": 400,
+  "test_size": 100,
+  "n_features": 18,
+  "feature_importances": {
+    "runway_months": 265.0,
+    "gross_margin": 220.0,
+    "ltv_cac_ratio": 209.0,
+    "hc_vs_rev_growth": 200.0,
+    "mom_customer_growth": 195.0,
+    "mom_revenue_growth": 186.0,
+    "cac": 169.0,
+    "ltv": 169.0,
+    "payback_period": 163.0,
+    "yoy_revenue_growth": 161.0,
+    "burn_rate": 155.0,
+    "funding_efficiency": 118.0,
+    "headcount": 98.0,
+    "revenue_per_employee": 88.0,
+    "capital_to_revenue": 76.0,
+    "opex_to_revenue": 74.0,
+    "dilution_per_round": 18.0,
+    "funding_rounds_count": 15.0
+  }
+}

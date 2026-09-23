@@ -12,11 +12,11 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).parent.resolve()
 
 # Layer directories
-DATA_LAYER_DIR = PROJECT_ROOT / "data-layer"
-PROCESSING_LAYER_DIR = PROJECT_ROOT / "processing-layer"
-MODELING_LAYER_DIR = PROJECT_ROOT / "modeling-layer"
-APPLICATION_LAYER_DIR = PROJECT_ROOT / "application-layer"
-PRESENTATION_LAYER_DIR = PROJECT_ROOT / "presentation-layer"
+DATA_LAYER_DIR = PROJECT_ROOT / "data_layer"
+PROCESSING_LAYER_DIR = PROJECT_ROOT / "processing_layer"
+MODELING_LAYER_DIR = PROJECT_ROOT / "modeling_layer"
+APPLICATION_LAYER_DIR = PROJECT_ROOT / "application_layer"
+PRESENTATION_LAYER_DIR = PROJECT_ROOT / "presentation_layer"
 
 # Data paths
 RAW_DATA_DIR = DATA_LAYER_DIR / "raw"
@@ -40,5 +40,7 @@ HF_API_TOKEN = os.getenv("HF_API_TOKEN", "")
 LLM_MODEL = os.getenv("LLM_MODEL", "mistralai/Mistral-7B-Instruct-v0.3")
 
 # API
-API_HOST = os.getenv("API_HOST", "0.0.0.0")
+_api_host_env = os.getenv("API_HOST", "127.0.0.1")
+# 0.0.0.0 is a server bind address; outbound HTTP clients on Windows fail with WinError 10049 if connecting to 0.0.0.0
+API_HOST = "127.0.0.1" if _api_host_env == "0.0.0.0" else _api_host_env
 API_PORT = int(os.getenv("API_PORT", "8000"))

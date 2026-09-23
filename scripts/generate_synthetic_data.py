@@ -23,7 +23,7 @@ sys.path.insert(0, PROJECT_ROOT)
 # ── Configuration ──
 NUM_STARTUPS = 500
 RANDOM_SEED = 42
-OUTPUT_PATH = os.path.join(PROJECT_ROOT, "data-layer", "raw", "reference_startups.csv")
+OUTPUT_PATH = os.path.join(PROJECT_ROOT, "data_layer", "raw", "reference_startups.csv")
 
 INDUSTRIES = {
     "SaaS":        {"weight": 0.30, "margin_mean": 0.70, "margin_std": 0.12},

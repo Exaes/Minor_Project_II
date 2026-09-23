@@ -1,0 +1,4 @@
+company_name,industry,founding_year,funding_stage,total_funding_usd,funding_rounds_count,monthly_revenue,monthly_expenses,cogs,operating_expenses,gross_profit,headcount,customer_count,monthly_burn,marketing_spend,avg_revenue_per_customer,avg_customer_lifetime_months,new_customers_monthly,mom_revenue_growth,mom_customer_growth,yoy_revenue_growth
+CloudScale AI,SaaS,2022,Seed,1500000,1,65000,95000,13000,82000,52000,12,320,30000,18000,203.12,28.0,22,0.08,0.07,1.52
+PayPulse,Fintech,2021,Series A,5000000,2,120000,280000,54000,226000,66000,38,1200,160000,85000,100.00,18.0,45,0.02,0.01,0.27
+BioMetric Health,HealthTech,2023,Pre-seed,350000,1,15000,32000,6000,26000,9000,5,60,17000,6000,250.00,24.0,6,0.12,0.10,2.90

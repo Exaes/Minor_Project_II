@@ -43,10 +43,10 @@ python scripts/generate_synthetic_data.py
 python scripts/train_model.py
 
 # 4. Start the backend API
-python -m uvicorn application-layer.main:app --host 0.0.0.0 --port 8000
+python -m uvicorn application_layer.main:app --host 0.0.0.0 --port 8000
 
 # 5. Start the dashboard (in a new terminal)
-streamlit run presentation-layer/app.py --server.port 8501
+streamlit run presentation_layer/app.py --server.port 8501
 ```
 
 ### Option 2: Docker Compose
@@ -64,32 +64,32 @@ Then open:
 ## Project Structure
 
 ```
-├── data-layer/              # Data ingestion, storage, templates
+├── data_layer/              # Data ingestion, storage, templates
 │   ├── collectors/          # Dataset loader, CSV/Excel uploader
 │   ├── storage/             # SQLAlchemy models, database engine
 │   ├── raw/                 # Raw data files
 │   ├── processed/           # Cleaned/engineered data
 │   └── templates/           # Upload template CSV
 │
-├── processing-layer/        # Data cleaning, feature engineering
+├── processing_layer/        # Data cleaning, feature engineering
 │   ├── cleaner.py           # Missing values, outliers, type coercion
 │   ├── normalizer.py        # Scaling, log transforms
 │   ├── feature_engineer.py  # 15+ financial/operational metrics
 │   └── peer_grouper.py      # Industry-stage-size peer bucketing
 │
-├── modeling-layer/          # ML models + LLM integration
+├── modeling_layer/          # ML models + LLM integration
 │   ├── train_benchmark_model.py  # Train LightGBM success-pattern model
 │   ├── scorer.py            # Score startups, compute deviations
 │   ├── llm/                 # LLM prompt templates + generators
 │   └── saved_models/        # Serialized models (joblib)
 │
-├── application-layer/       # FastAPI backend
+├── application_layer/       # FastAPI backend
 │   ├── main.py              # App entry point
 │   ├── api/                 # REST endpoints
 │   ├── services/            # Pipeline orchestration, PDF generation
 │   └── schemas.py           # Pydantic request/response models
 │
-├── presentation-layer/      # Streamlit dashboard
+├── presentation_layer/      # Streamlit dashboard
 │   ├── app.py               # Main app entry point
 │   ├── pages/               # Multi-page UI (Upload, Dashboard, Recommendations)
 │   └── components/          # Charts, styling

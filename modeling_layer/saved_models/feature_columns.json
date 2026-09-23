@@ -1,0 +1,20 @@
+[
+  "burn_rate",
+  "runway_months",
+  "cac",
+  "ltv",
+  "ltv_cac_ratio",
+  "gross_margin",
+  "opex_to_revenue",
+  "revenue_per_employee",
+  "mom_revenue_growth",
+  "yoy_revenue_growth",
+  "mom_customer_growth",
+  "funding_efficiency",
+  "hc_vs_rev_growth",
+  "capital_to_revenue",
+  "dilution_per_round",
+  "payback_period",
+  "headcount",
+  "funding_rounds_count"
+]

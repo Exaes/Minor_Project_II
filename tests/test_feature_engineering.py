@@ -36,7 +36,7 @@ def test_unit_economics(sample_data):
     
     assert df["cac"].iloc[0] == 200.0 # 20k / 100
     assert df["ltv"].iloc[0] == 12000.0 # 500 * 24
-    assert df["ltv_cac_ratio"].iloc[0] == 60.0 # 12k / 200, though might be capped
+    assert df["ltv_cac_ratio"].iloc[0] == 50.0 # 12k / 200 capped at 50
     
 def test_growth_and_efficiency(sample_data):
     df = compute_all_features(sample_data)

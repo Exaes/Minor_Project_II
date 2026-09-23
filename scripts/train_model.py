@@ -32,7 +32,7 @@ def main():
         sys.exit(1)
 
     # Import and run training pipeline
-    _modeling_dir = os.path.join(PROJECT_ROOT, "modeling-layer")
+    _modeling_dir = os.path.join(PROJECT_ROOT, "modeling_layer")
     sys.path.insert(0, _modeling_dir)
     import train_benchmark_model
 
